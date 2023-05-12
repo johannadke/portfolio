@@ -71,23 +71,20 @@ button:hover {
 .row {
     display: flex;
     justify-content: space-around;
-    align-content: center;
 }
 
 .element {
     width: 50%;
-    align-content: center;
 }
 
 .picture_element {
     width: 50%;
-    justify-content: center;
-    align-items: center;
 }
 
 @media (max-width: 550px) {
     .row {
         flex-direction: column;
+        align-items: center;
     }
 
     .element {
@@ -104,5 +101,9 @@ button:hover {
 
     button {
         width: 100%;
+    }
+
+    img {
+        margin-top: 5vh;
     }
 }
