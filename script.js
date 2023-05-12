@@ -1,24 +1,30 @@
 /**@type {HTMLButtonElement} */
 let addHobby;
+let addExperience
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM CONTENT LOADED");
   addHobby = document.getElementById("submit_new_hobby");
   addHobby.addEventListener("click", (e) => {
     e.preventDefault()
-    addNewHobby()
+    addNewElementToList(e.target.name)
+  });
+  addExperience = document.getElementById("submit_new_experience");
+  addExperience.addEventListener("click", (e) => {
+    e.preventDefault()
+    addNewElementToList(e.target.name)
   });
 });
 
-const addNewHobby = () => {
-  const newHobby = document.getElementById("new_hobby").value;
-  const list = document.getElementById("hobby_list")
+const addNewElementToList = (type) => {
+  const newHobby = document.getElementById(`new_${type}`).value;
+  const list = document.getElementById(`${type}_list`)
 
   if (newHobby) {
     let node = document.createElement("li");
     node.innerText = newHobby;
 
     list.appendChild(node);
-    document.getElementById("hobby_form").reset()
+    document.getElementById(`${type}_form`).reset()
   }
 };
