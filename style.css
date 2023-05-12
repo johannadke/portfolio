@@ -1,9 +1,13 @@
 h1 {
-  color: red;
+  color: darkblue;
+}
+
+h2 {
+    color: deeppink;
 }
 
 p {
-    color: orange;
+    color: blueviolet;
 }
 
 li{
