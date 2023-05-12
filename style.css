@@ -1,28 +1,90 @@
-h1 {
-  color: darkblue;
-}
-
-h2 {
-    color: deeppink;
-}
-
-p {
-    color: blueviolet;
-}
-
-li{
-    color: blueviolet;
-}
-
 img {
-    width: 100%
+    width: 100%;
+    aspect-ratio: 2929 / 3897;
+}
+
+li:nth-child(6n + 1) {
+    color: red;
+}
+
+li:nth-child(6n + 2) {
+    color: orange;
+}
+
+li:nth-child(6n + 3) {
+    color: rgb(233, 219, 32);
+}
+
+li:nth-child(6n + 4) {
+    color: green;
+}
+
+li:nth-child(6n + 5) {
+    color: blue;
+}
+
+li:nth-child(6n + 6) {
+    color: purple;
+}
+
+input[type=text] {
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 12px 20px 12px 20px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 70%;
+}
+
+button {
+    width: 19%;
+    min-width: 130px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 16px 30px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    color: lightblue;
 }
 
 .row {
     display: flex;
     justify-content: space-around;
+    align-content: center;
 }
 
 .element {
-    width: 50%
+    width: 50%;
+}
+
+@media (max-width: 550px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .element {
+        width: 100%;
+    }
+
+    input[type=text] {
+        width: 100%;
+    }
+
+    input[type=text]:focus {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
 }

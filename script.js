@@ -3,17 +3,22 @@ let addHobby;
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM CONTENT LOADED");
-  addHobby = document.getElementById("submitNewHobby");
-  addHobby.addEventListener("click", addNewHobby);
+  addHobby = document.getElementById("submit_new_hobby");
+  addHobby.addEventListener("click", (e) => {
+    e.preventDefault()
+    addNewHobby()
+  });
 });
 
 const addNewHobby = () => {
-  const newHobby = document.getElementById("NewHobby").value;
+  const newHobby = document.getElementById("new_hobby").value;
+  const list = document.getElementById("hobby_list")
 
   if (newHobby) {
     let node = document.createElement("li");
     node.innerText = newHobby;
 
-    document.getElementById("hobbyList").appendChild(node);
+    list.appendChild(node);
+    document.getElementById("hobby_form").reset()
   }
 };
