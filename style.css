@@ -13,3 +13,16 @@ p {
 li{
     color: blueviolet;
 }
+
+img {
+    width: 100%
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.element {
+    width: 50%
+}

@@ -8,29 +8,40 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello Kurs!</h1>
+    <div class="row">
+      <div class="element">
+        <h1>Hallo Kurs!</h1>
 
-    <p>Mein Name ist Johanna Deike und ich bin 21 Jahre alt</p>
-    <img
-      src="me.jpg"
-      alt="Hier ist ein Bild von Johanna Deike zu sehen"
-      width="50%"
-    />
-<h2>Meine Hobbies:</h2>
-    <ul id="hobbyList">
-      <li style="color: red">Home-Workouts</li>
-      <li style="color: orange">Joggen</li>
-      <li style="color: yellow">Querflöte spielen</li>
-      <li style="color: green">Reisen</li>
-      <li style="color: blue">Essen gehen</li>
-    </ul>
+        <p>Mein Name ist Johanna Deike und ich bin 21 Jahre alt</p>
+       
+        <h2>Meine Hobbies:</h2>
+        <ul id="hobbyList">
+          <li style="color: red">Home-Workouts</li>
+          <li style="color: orange">Joggen</li>
+          <li style="color: yellow">Querflöte spielen</li>
+          <li style="color: green">Reisen</li>
+          <li style="color: blue">Essen gehen</li>
+        </ul>
 
-    <form>
-      <label for="NewHobby">Hobbies hinzufügen</label><br />
-      <input type="text" name="NewHobby" id="NewHobby" value="neues Hobby" />
-    </form>
+        <form>
+          <label for="NewHobby">Hobbies hinzufügen</label><br />
+          <input
+            type="text"
+            name="NewHobby"
+            id="NewHobby"
+            value="neues Hobby"
+          />
+        </form>
 
-    <button onclick="addNewHobby()">Hinzufügen</button>
+        <button id="submitNewHobby">Hinzufügen</button>
+      </div>
+      <div class="element">
+        <img
+        src="me.jpg"
+        alt="Hier ist ein Bild von Johanna Deike zu sehen"
+      />
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
